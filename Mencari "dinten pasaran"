@@ -1,0 +1,97 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	
+	cout<<"Madosi Dinten Pasaran\n(Mencari Pasaran Hari)\n\n";
+	cout<<"Program ini bertujuan untuk mencari pasaran hari pada tanggal 1 setiap bulannya.\n";
+	//madosi neptu taun
+	int taun, pembagi, pengali, neptu;
+	
+	cout<<"Tahun berapa?\n";
+	cin>>taun;
+	
+	pembagi=taun/8;
+	pengali=pembagi*8;
+	neptu=taun-pengali;
+	
+	switch(neptu){
+		case 0:
+			neptu=7;
+			break;
+		case 1:
+			neptu=1;
+			break;
+		case 2:
+			neptu=5;
+			break;
+		case 3:
+			neptu=5;
+			break;
+		case 4:
+			neptu=9;
+			break;
+		case 5:
+			neptu=4;
+			break;
+		case 6:
+			neptu=3;
+			break;
+		case 7:
+			neptu=2;
+			break;
+	}
+	
+	//madosi neptu sasi
+	int sasi;
+	
+	cout<<"pilih bulan dalam perhitungan jawa (masukkan angkanya saja)\n";
+	cout<<"[1]Sura, Sapar.\n[2]Mulud, Ba'da Mulud.\n[3]Jumadil Awal, Jumadil Akir.\n[4]Rejeb, Ruwah.\n[5]Pasa, Sawal.\n[6]Dulsingidah, Besar.\n";
+	cin>>sasi;
+	
+	switch(sasi){
+		case 1:
+			sasi=5;
+			break;
+		case 2:
+			sasi=9;
+			break;
+		case 3:
+			sasi=3;
+			break;
+		case 4:
+			sasi=2;
+			break;
+		case 5:
+			sasi=1;
+			break;
+		case 6:
+			sasi=5;
+			break;
+	}
+	
+	//ngitung pasaran
+	int pasaran;
+	pasaran=neptu+sasi-1;
+	pasaran=pasaran%5;
+	
+	switch(pasaran){
+		case 1:
+			cout<<"jadi, dinten pasarannya adalah Kliwon.";
+			break;
+		case 2:
+			cout<<"jadi, dinten pasarannya adalah Legi.";
+			break;
+		case 3:
+			cout<<"jadi, dinten pasarannya adalah Paing.";
+			break;
+		case 4:
+			cout<<"jadi, dinten pasarannya adalah Pon.";
+			break;
+		case 0:
+			cout<<"jadi, dinten pasarannya adalah Wage.";
+			break;
+	}
+	return 0;
+}
